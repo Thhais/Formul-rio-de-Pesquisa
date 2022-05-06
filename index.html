@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="estilo.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header class="header-container">
+            <h1 class="header-title">Formulário de pesquisa</h1>
+            <h2 class="header-subtitle">Agradecemos pela sua contribuição!</h2>
+        </header>
+        <form action="post" class="form">
+            <div class="container-form-control">
+                <div class="form-control">               
+                    <label for="nome"  class="label-form-control">Nome</label>
+                    <input type="text" name="nome" placeholder="Digite seu nome" class="input-block">
+                </div>
+                <div class="form-control">                 
+                    <label for="sobrenome" class="label-form-control">Sobrenome</label>
+                    <input type="text" name="sobrenome" placeholder="Digite seu sobrenome" class="input-block">
+                </div>
+                <div class="form-control">  
+                    <label for="email" class="label-form-control">E-mail</label>
+                    <input type="email" name="email" placeholder="Digite seu e-mail" class="input-block">
+                </div>           
+                <div class="form-control">
+                    <label for="idade" class="label-form-control">Idade</label>   
+                    <input type="number" name="idade" class="input-block" placeholder="Digite sua idade">
+                </div>
+            </div>    
+            
+            <div class="genre">
+                <div class="genre-title">
+                    <p>Gênero</p>
+                </div>
+            <div class="genre-control">
+                <label class="labelflex" >
+                    <input type="radio" name="genre" value="feminino" class="input-radio"><span class="radio"> </span>Feminino
+                </label>
+                <label class="labelflex">
+                    <input type="radio" name="genre" value="Masculino" class="input-radio"><span class="radio"> </span>Masculino
+                </label>
+                <label class="labelflex">
+                    <input type="radio" name="genre" value="outro" class="input-radio"><span class="radio"> </span>Outro
+                </label>
+            </div>
+            </div>
+
+            <div class="form-technology"> 
+                <div class="technology-title">
+                    <p>Tecnologias que utiliza</p>
+                </div> 
+                <div class="technology-check">
+                    <label class="labelflex">
+                        <input type="checkbox" name="tecnologias" value="css" class="input-checkbox"><span class="checkbox"> </span>CSS
+                    </label>
+                    <label class="labelflex">
+                        <input type="checkbox" name="tecnologias" value="html" class="input-checkbox"><span class="checkbox"> </span>HTML
+                    </label>
+                    <label class="labelflex">
+                        <input type="checkbox" name="tecnologias" value="javascript" class="input-checkbox"><span class="checkbox"> </span>JavaScript
+                    </label>
+                    <label class="labelflex">
+                        <input type="checkbox" name="tecnologias" value="php" class="input-checkbox"><span class="checkbox"> </span>PHP
+                    </label>
+                    <label class="labelflex">
+                        <input type="checkbox" name="tecnologias" value="java" class="input-checkbox"><span class="checkbox"> </span>Java
+                    </label>
+                    <label class="labelflex">
+                        <input type="checkbox" name="tecnologias" value="python" class="input-checkbox"><span class="checkbox"> </span>Python
+                    </label>
+                </div>
+            </div>
+
+            <div class="container-form-control">
+                <p>Conte um pouco da sua experiência com essas tecnologias</p>
+                <textarea name="mensagem" id="mensagem" placeholder="Digite aqui..." class="textarea"></textarea>
+            </div >
+            
+            <div class="button">
+                <input type="submit" value="Enviar" class="button-submit">
+            </div>
+        </form>     
+    </div>
+</body>
+</html>

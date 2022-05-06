@@ -1,0 +1,223 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    background-color: #2a9d8f;
+    width: 100%;
+    display: flex;
+   justify-content: center;
+   font-weight: 400;
+}
+*{
+    box-sizing: border-box;
+}
+h1,h2,h3{
+    margin: 0;
+    padding: 0.3rem;
+}
+p, label{
+    color: black;
+    font-weight:bold;
+    
+}
+body::before{
+    content: ' ';
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    
+}
+.container{
+    margin: 3rem 0;
+    width: 60%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+.header-container{
+    margin: 1rem 0;
+    text-align: center;
+}
+.header-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #264653;
+}
+.header-subtitle{
+    font-size: 1rem;
+    color: #264653;
+}
+.form{ 
+    width: 80%;  
+}
+.container-form-control{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+     margin-bottom: 0.5rem;
+   
+}
+.form-control{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.label-form-control{
+    flex: 1 1 0;
+}
+.form-control input{
+    flex: 3 1 0;
+     
+}
+.input-radio, .input-checkbox{
+    position:absolute;
+    left: 0px;
+    top:-500px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+.labelflex:focus{
+    border: 1px solid #e76f51;
+}
+.input-block{
+    height: 2.5rem;
+}
+.radio{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #000000;
+    margin-right: 0.3rem;
+    position: relative;
+    
+}
+.input-radio:checked + .radio::before{
+    content: " ";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #e76f51;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+}
+.input-radio:focus + .radio{
+    border: 1px solid #e76f51;
+}
+.checkbox{
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid #000000;
+    margin-right: 0.3rem;
+    position: relative;
+    
+}
+.input-checkbox:checked + .checkbox{
+    background-color: #e76f51;
+    border: #e76f51;  
+}
+.input-checkbox:checked + .checkbox:before{
+    content: " ";
+    display: inline-block;
+    width: 4px;
+    height: 8px;
+    border: 2px solid white;
+    position: absolute;
+    left: 3px;
+    top: 0px;
+    border-top: transparent;
+    border-left: transparent;
+    transform: rotate(40deg);
+}
+.form-control input, .textarea{
+    outline: none;
+    color: gray;
+    padding: 0.4rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 1px #c2c7c7;
+}
+.form-control input:focus, .textarea:focus{
+    border-color: #2a9d8f;
+}
+
+.genre-control{
+    display: flex;
+    margin-bottom: 0.5rem;
+    flex-direction: column;
+}
+.labelflex{
+    display: flex; 
+    align-items: center;
+    margin-bottom: 0.3rem;
+
+}
+
+
+.technology-check{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.textarea{
+    width: 100%;
+    min-height: 6rem;
+    resize: vertical;
+}
+
+
+.button-submit{
+    border-radius: 5px;
+    padding: 0.7rem;
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    font-weight: 300;
+    transition: background-color 0.3s linear;
+}
+@media screen and (max-width: 1060px){
+    .container{
+        width: 70%;
+    }
+    
+}
+@media screen and (max-width: 860px){
+    .container{
+        width: 80%;
+    }
+   
+    .technology-check{
+        flex-direction: column;
+    }
+    .form-control{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-control input{
+        width: 100%;
+        margin-top: 0.3rem;
+    }
+}
+@media screen and (max-width: 550px){
+    .container{
+        width: 85%;
+    }
+    .form{
+        width: 100%;
+    }
+}
